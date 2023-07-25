@@ -26,12 +26,15 @@ public  class CreateNewAccountOnMystoreSteps {
         password.sendKeys("123456789");
         WebElement buttonSignIn = driver.findElement(By.id("submit-login"));
         buttonSignIn.click();
+        WebElement addressesbytton = driver.findElement(By.linkText("Addresses"));
+        addressesbytton.click();
+        WebElement createnewaddressbutton = driver.findElement( By.cssSelector("[href=\"https://mystore-testlab.coderslab.pl/index.php?controller=address\"]"));
+        createnewaddressbutton.click();
 
 
 
 
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
@@ -48,6 +51,8 @@ public  class CreateNewAccountOnMystoreSteps {
 
     @Then(": click on {string}")
     public void click_on(String string) {
+        WebElement createnewaddressbutton = driver.findElement( By.cssSelector("[href=\"https://mystore-testlab.coderslab.pl/index.php?controller=address\"]"));
+        createnewaddressbutton.click();
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
